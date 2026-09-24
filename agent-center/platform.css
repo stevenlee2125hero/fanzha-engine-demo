@@ -1,0 +1,29 @@
+/* 平台视觉适配；嵌入模块没有独立侧栏和平台顶栏。 */
+:root{font-size:14px;font-family:"Microsoft YaHei","PingFang SC",sans-serif;--blue:#3978d5;--line:#e2e9f3;--muted:#718097;color:#354760;background:#f5f7fb}
+body{font-size:1rem;min-width:0;background:#f5f7fb}
+.embedded-center{min-height:100vh}
+.main{max-width:none;width:100%;padding:1.5rem;margin:0}
+.workspace-toolbar{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.5rem 0;color:#77879d;font-size:.86rem}
+.project-switch{font-size:.86rem;background:#fff;border-color:var(--line)}
+.eyebrow{display:none}
+.center-head{margin-bottom:1.3rem}
+.center-head h1{font-size:1.3rem;color:#30445f;border-left:3px solid var(--blue);padding-left:.65rem}
+.center-head p{font-size:.86rem;margin-top:.65rem}
+button.primary{background:var(--blue);border-color:var(--blue);box-shadow:none}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #82ade9;outline-offset:2px}
+.panel,.project-card,.project-stats,.tip-card,.edit-menu{border-radius:.55rem;box-shadow:none}
+.project-card{background:linear-gradient(110deg,#edf4ff,#f8fbff)}
+.project-card h2{font-size:1.14rem}
+.project-stats strong{font-size:1.7rem;color:#3267b9}
+.new-agent-card{background:#fbfdff;border-color:#c5d8f1;border-radius:.55rem;min-height:17rem}
+.new-agent-card:hover{background:#eff5ff;border-color:var(--blue)}
+.new-agent-plus{color:var(--blue);background:#e8f0fd}
+.agent-home-grid,.resource-grid{grid-template-columns:repeat(auto-fill,minmax(min(21.4rem,100%),1fr));gap:1.2rem}
+.editor-layout{grid-template-columns:12.5rem minmax(0,1fr);gap:1.2rem}
+.edit-menu{max-height:calc(100vh - 2rem);overflow:auto}
+.edit-menu button.active{color:#2863bc;background:#e6effd}
+.panel-head{background:#fbfcff}
+.local-disclosure{color:#8a97a8;font-size:.79rem}
+@media(max-width:700px){.main{padding:1rem}.workspace-toolbar{padding:.75rem 1rem 0}.editor-layout{grid-template-columns:1fr}.edit-menu{display:flex;overflow:auto;position:static}.edit-menu button{width:auto;flex:none}.project-overview,.project-tip{grid-template-columns:1fr}}
+
+@media(min-width:850px){.project-overview{grid-template-columns:minmax(0,1fr) 23rem;gap:1.2rem}.project-card{padding:1.2rem}.project-card p{display:none}.project-stats{padding:.7rem}.project-stats strong{font-size:1.6rem}}
